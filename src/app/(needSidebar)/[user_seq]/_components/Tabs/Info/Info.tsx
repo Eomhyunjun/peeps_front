@@ -1,16 +1,11 @@
-import { popUpData } from '@/src/tmp_data/dummy'
+import { OwnerBadgeListAtom } from '@/src/common/recoil/ownerAtom'
+import { Badge_T } from '@/src/common/types/badge'
 import { useEffect, useRef } from 'react'
+import { useRecoilValue } from 'recoil'
+import BadgeBox from '../InfoEdit/AddBadge/BadgeBox'
+import Introduce from './Introduce'
 import Carrer from './Item/Carrer'
 import Education from './Item/Education'
-
-import { IsOwnerAtom } from '@/src/common/recoil/userHome'
-import NextImg from '@/src/common/utils/NextImg'
-import { useRecoilValue } from 'recoil'
-import Introduce from './Introduce'
-import { OwnerProfile_T } from '@/src/common/types/owner'
-import { OwnerBadgeListAtom, OwnerProfileStateAtom } from '@/src/common/recoil/ownerAtom'
-import BadgeBox from '../InfoEdit/AddBadge/BadgeBox'
-import { Badge_T } from '@/src/common/types/badge'
 
 export default function Info() {
   const ownerBadgeList = useRecoilValue<Badge_T[]>(OwnerBadgeListAtom)
